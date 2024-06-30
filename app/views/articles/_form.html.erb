@@ -1,0 +1,10 @@
+
+<% sample_text = "<p>This is a sample description</p>\n<h2>Sample Subheading</h2>\n<p><a href="">Lorem ipsum</a></p>" %>
+
+<%= form_with model: article do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: "form-control mb-3"%>
+  <%= f.label :content %>
+  <%= f.text_area :content, class: "form-control mb-3", rows: "10", placeholder: sample_text %>
+  <%= f.submit button_text, class: "btn btn-primary mb-3" %>
+<% end %>

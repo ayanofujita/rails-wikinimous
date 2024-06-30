@@ -1,0 +1,6 @@
+<% @articles.each do |article| %>
+  <div>
+    <h2><%= link_to article.title, article_path(article), class: "text-decoration-none" %></h2>
+    <p><%= sanitize article.content.first(50) + "..." %></p>
+  </div>
+<% end %>
